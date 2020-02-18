@@ -1,0 +1,26 @@
+<h1>Liste des Tasks</h1>
+<div class="container">
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <% if task.completed %>
+      <i class="material-icons">
+      check_circle_outline
+      </i>
+      <% else %>
+      <i class="material-icons">
+      radio_button_unchecked
+      </i>
+      <% end %>
+      <%= link_to task[:title], task_path(task) %>
+      <%= link_to tasks_path(task), method: :delete, data: {confirm: "Are you sure?" } do %>
+      <i class="fa fa-trash-o"></i>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+</div>
+<hr>
+
+
+<%= link_to 'add a task', new_task_path(@tasks) %>

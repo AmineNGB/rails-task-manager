@@ -1,0 +1,35 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  background: #F9F9F9;
+  font-size: 24px;
+}
+
+.container {
+  width: 980px;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+li {
+  list-style-type: none;
+  justify-content: center;
+}
+
+li .material-icons {
+  text-align: center;
+  justify-content: center;
+}
+
+// i .far fa-trash-alt{
+//   background-color: black;
+//   z-index: 10px;
+//   width: 10px;
+//   height: 10px;
+// }
